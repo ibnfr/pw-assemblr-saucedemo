@@ -22,15 +22,15 @@ module.exports = defineConfig({
   ],
 
   use: {
-    baseURL: process.env.BASE_URL ?? 'https://opensource-demo.orangehrmlive.com',
+    baseURL: process.env.BASE_URL ?? 'https://saucedemo.com/',
 
     // Bukti hanya diambil saat dibutuhkan, agar ukuran repo tetap wajar
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
     trace: 'on-first-retry',
 
-    actionTimeout: 15_000,
-    navigationTimeout: 30_000,
+    actionTimeout: 30_000,
+    navigationTimeout: 60_000,
   },
 
   timeout: 60 * 1000,

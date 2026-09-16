@@ -24,6 +24,7 @@ test.describe('TS-UI-CHECKOUT-001 — Melakukan checkout product', () => {
     await checkoutPage.productName.click();
     await checkoutPage.addToCartButton.click();
     await checkoutPage.goto();
+    await checkoutPage.checkoutButton.waitFor({ state: 'visible', timeout: 30000 });
     await checkoutPage.checkoutButton.click();
     await checkoutPage.firstNameInput.fill('Ibnu');
     await checkoutPage.lastNameInput.fill('Farhan');
@@ -39,6 +40,7 @@ test.describe('TS-UI-CHECKOUT-001 — Melakukan checkout product', () => {
     await checkoutPage.productTShirt.click();
     await checkoutPage.productJacket.click();
     await checkoutPage.goto();
+    await checkoutPage.checkoutButton.waitFor({ state: 'visible', timeout: 30000 });
     await checkoutPage.checkoutButton.click();
     await checkoutPage.firstNameInput.fill('Ibnu');
     await checkoutPage.lastNameInput.fill('Farhan');
